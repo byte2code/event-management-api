@@ -12,4 +12,8 @@ public interface EventDAL {
 
 	String save(Event item);
 
+	String delete(Long id);
+
+	String update(Event updateEvent);
+
 }

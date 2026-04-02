@@ -1,5 +1,6 @@
 package com.cn.cnEvent.controller;
 
+import java.awt.geom.CubicCurve2D;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,5 +33,15 @@ public class EventController {
 	@PostMapping("/save")
 	public String save(@RequestBody Event event){
 	    return eventService.save(event);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String delete(@PathVariable Long id) {
+	    return eventService.delete(id);
+	}
+	
+	@PutMapping("/update")
+	public String update(@RequestBody Event updateEvent) {
+	    return eventService.update(updateEvent);
 	}
 }

@@ -1,10 +1,10 @@
 # Event Management API
 
-Spring Boot REST API for managing event records with JPA, MySQL persistence, and a simple layered DAL/service architecture.
+Spring Boot REST API for managing event records with JPA, MySQL persistence, and CRUD-style layered DAL/service architecture.
 
 ## Overview
 
-This project demonstrates a compact Spring Boot event-management API built with a straightforward layered design. It focuses on core event persistence and retrieval using Spring Boot, Hibernate, and MySQL, making it a clean learning project for basic REST and JPA integration.
+This project demonstrates a compact Spring Boot event-management API built with a straightforward layered design. It focuses on creating, retrieving, updating, and deleting event records using Spring Boot, Hibernate, and MySQL, making it a clean learning project for CRUD-style REST and JPA integration.
 
 ## Concepts and Features Covered
 
@@ -14,6 +14,8 @@ This project demonstrates a compact Spring Boot event-management API built with 
 - `GET` endpoint for retrieving an event by ID
 - `GET` endpoint for listing all events
 - `POST` endpoint for saving an event
+- `PUT` endpoint for updating an event
+- `DELETE` endpoint for removing an event by ID
 - MySQL-backed data persistence with automatic schema update
 
 ## Tech Stack
@@ -61,6 +63,8 @@ Available endpoints:
 - `GET /event/{id}`
 - `GET /event/all`
 - `POST /event/save`
+- `PUT /event/update`
+- `DELETE /event/delete/{id}`
 
 Example request body:
 
@@ -75,10 +79,11 @@ Example request body:
 
 - Demonstrates a compact end-to-end Spring Boot REST and JPA setup
 - Shows how to separate persistence concerns into a DAL layer
+- Extends a simple create/read API into a fuller CRUD learning project
 - Uses Hibernate sessions through `EntityManager` for event persistence
 - Keeps the project intentionally focused so the core flow stays easy to understand
 
 ## GitHub Metadata
 
-- Suggested repository description: `Spring Boot REST API for event record management with JPA, MySQL persistence, and a simple layered DAL/service design.`
-- Suggested topics: `java`, `java-17`, `spring-boot`, `spring-data-jpa`, `hibernate`, `mysql`, `rest-api`, `event-management`, `maven`, `learning-project`, `portfolio-project`
+- Suggested repository description: `Spring Boot REST API for event record management with JPA, MySQL persistence, and CRUD-style layered DAL/service design.`
+- Suggested topics: `java`, `java-17`, `spring-boot`, `spring-data-jpa`, `hibernate`, `mysql`, `rest-api`, `event-management`, `crud-api`, `maven`, `learning-project`, `portfolio-project`

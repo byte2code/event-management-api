@@ -39,4 +39,25 @@ public class EventDALImpl implements EventDAL {
 	return "The event was saved successfully.";
     }
 
+    @Override
+    public String delete(Long id) {
+	Session session = entityManager.unwrap(Session.class); // session object
+	Event event = session.get(Event.class, id);
+	session.delete(event);
+	return "The event was deleted successfully.";
+    }
+
+    @Override
+    public String update(Event updateEvent) {
+	Session session = entityManager.unwrap(Session.class);
+	
+	Event currentEvent = session.get(Event.class, updateEvent.getId());
+	
+	currentEvent.setDescription(updateEvent.getDescription());
+	currentEvent.setName(updateEvent.getName());
+	currentEvent.setId(updateEvent.getId());
+	
+	return "Event is updated successfully.";
+    }
+
 }
