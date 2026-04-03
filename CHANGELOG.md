@@ -2,6 +2,23 @@
 
 All notable changes to this project are documented in this file.
 
+## [v3.0.0] - 2026-04-03
+
+### Summary
+Third version of the Event Management API that expands the project with schedule-detail management, location-based event lookup, and custom exception handling.
+
+### Highlights
+
+- Added `EventScheduleDetail` with one-to-one mapping to `Event`.
+- Added schedule-detail DAL, service, and controller support.
+- Added `GET /event/location/{location}` for location-based event filtering.
+- Added custom exceptions for duplicate, invalid, and not-found scenarios.
+- Refreshed the README to present the project as a stronger layered JPA showcase.
+
+### Notes
+
+This version improves the project’s architectural learning value by introducing related entities and clearer failure handling without changing the core event-management purpose.
+
 ## [v2.0.0] - 2026-04-03
 
 ### Summary

@@ -15,5 +15,4 @@ public interface EventDAL {
 	String delete(Long id);
 
 	String update(Event updateEvent);
-
 }
